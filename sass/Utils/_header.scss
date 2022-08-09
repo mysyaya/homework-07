@@ -1,0 +1,146 @@
+// Шапка
+
+.header {
+    .conteiner {
+        margin-bottom: 0;
+    }
+}
+
+.head {
+    display: flex;
+    align-items: center;
+}
+
+.head-link {
+    margin-right: 93px;
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $AccentColor;
+    }
+}
+
+.head-nav {
+    display: flex;
+    align-items: center;
+
+    .link:hover,
+    .link:focus {
+        color: $AccentColor;
+    }
+}
+
+.head-nav,
+.head-cont {
+    .link {
+        padding: 20px 0;
+
+        color: $TitleTextColor;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .link:hover,
+    .link:focus {
+        color: $AccentColor;
+    }
+}
+
+.nav {
+    @extend %list;
+    display: flex;
+
+    .item {
+        position: relative;
+        margin-right: 50px;
+    }
+
+    .item:last-child {
+        margin-right: 0;
+    }
+
+    .current {
+        color: $AccentColor;
+    }
+
+    .current::after {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        right: 0;
+        bottom: 0;
+        content: '';
+        border-radius: 2px;
+        background-color: $AccentColor;
+    }
+}
+
+.head-cont {
+    @extend %list;
+    display: flex;
+    margin-left: auto;
+
+    .item {
+        margin-right: 50px;
+    }
+
+    .item:last-child {
+        margin-right: 0;
+    }
+
+    .link {
+        display: inline-flex;
+        align-items: center;
+
+        margin-right: 30px;
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .link:last-child {
+        margin-right: 0;
+    }
+
+    .link:hover,
+    .link:focus {
+        color: $AccentColor;
+    }
+}
+
+.logo {
+    color: $AccentColor;
+}
+
+.icon-mail {
+    width: 10px;
+    height: 16px;
+    fill: var(--title-text-color);
+
+    margin-right: 10px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-tel {
+    width: 16px;
+    height: 12px;
+    fill: var(--title-text-color);
+
+    margin-right: 10px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
